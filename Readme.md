@@ -3,3 +3,7 @@
 Пополнить баланс на заданную сумму указав id.
 Программа подключена к базе PostgreSQL и поднята API c помощью Spring Boot.
 <img width="911" alt="Скриншот структуры базы данных" src="https://user-images.githubusercontent.com/82258973/168846946-7d8d997e-b043-4249-806d-7bc5ec6991b2.png">
+
+Доработаны функции takeMoney и putMoney - теперь все операции сохраняются.
+Добавлена возможность создать лист операций с помощью ID и диапазона дат. 
+![image](https://user-images.githubusercontent.com/82258973/173062525-a4d5d802-30d7-4922-b17f-a23b3a7ffcec.png)

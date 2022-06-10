@@ -1,12 +1,14 @@
 package com.example.bigmoneybank.controller;
 
 import com.example.bigmoneybank.entity.Client;
+import com.example.bigmoneybank.entity.Operation;
 import com.example.bigmoneybank.service.ClientService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
+import java.sql.Date;
 import java.util.List;
 
 
@@ -48,4 +50,11 @@ public class AccountController {
     public String putMoney(@RequestParam Long id, @RequestParam BigDecimal amount) {
         return clientService.putMoney(id, amount);
     }
+
+    @GetMapping("getOperationList")
+    public List<Operation> getOperationList(@RequestParam Long id, @RequestParam Date startDate, @RequestParam Date endDate) {
+        return clientService.getOperationList(id, startDate, endDate);
+    }
+
+
 }
